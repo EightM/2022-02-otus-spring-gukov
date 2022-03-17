@@ -23,9 +23,10 @@ public class DefaultExamService implements ExamService {
   }
 
   @Override
-  public ExamResult startExam() {
+  public void startExam() {
     Person person = personService.askCredentials();
-    return askQuestions(person, questionService.getAllQuestions());
+    var examResult =  askQuestions(person, questionService.getAllQuestions());
+    System.out.println(examResult);
   }
 
   private ExamResult askQuestions(Person person, List<Question> questions) {

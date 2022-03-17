@@ -4,7 +4,7 @@ import hw02.model.AnswerOption;
 import hw02.model.Question;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Repository
+@Component
 public class QuestionDao implements Dao<Question> {
 
   private final String pathToCsvFile;
